@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--	
+	<div th:if="${param.logout}">You have been logged out</div>
+	<div th:if="${param.error}">There was an error, please try again</div>
+ -->
+<form th:action="@{/api/login}" method="POST" >
+    <input type="text" name="name" />
+    <input type="password" name="password" />
+    <input type="submit" value="Login" />
+</form>
+<br><hr><br>
+<a th:href="@{/oauth2/authorization/facebook}">&nbsp;&nbsp;Login with Facebook</a>
+<br>
+<a th:href="@{/oauth2/authorization/google}">&nbsp;&nbsp;Login with Google</a>
+<br>
+<a th:href="@{/oauth2/authorization/github}">&nbsp;&nbsp;Login with Github</a>
+<br>
+<a th:href="@{/api/create}">&nbsp;&nbsp;Create Account</a>
+</body>
+</html>	

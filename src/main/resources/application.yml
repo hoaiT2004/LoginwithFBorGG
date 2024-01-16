@@ -1,0 +1,37 @@
+server:
+  error:
+    whitelabel:
+      enabled: true
+  port: 8888
+spring:
+  datasource:
+    password: 24052004
+    url: 'jdbc:mysql://localhost:3306/loginfb?createDatabaseIfNotExist=true'
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ad9df316ffebba7e141c
+            client-secret: 7e258c194755bbe4a6968c4768bc1ca4501849f9
+          facebook:
+            client-id: 892311355668175
+            client-secret: 1c0b62b25f2f3e77ddc24e3e1012edad
+            scope:
+              - email
+              - public_profile
+          google:
+            client-id: 1013639844875-9m89ohm3m0vrdho7qnbig8levqs0kr4a.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile

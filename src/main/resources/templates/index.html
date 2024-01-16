@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav>
+		<div th:if="${session.user!=null}">
+			<p th:text="${session.user.name}"></p>
+		</div>
+		<div th:if="${session.user==null}">
+			<p sec:authentication="name">Username</p>
+		</div>
+    <a th:href="@{/api/logout}">Logout</a>                     
+	</nav>
+<p sec:authentication="authorities">User authorities</p>
+</form>
+</body>
+</html>	
